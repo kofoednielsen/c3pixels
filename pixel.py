@@ -2,7 +2,7 @@ import socket
 import threading
 import random
 from PIL import Image
-im = Image.open("img.png")
+im = Image.open(r"c3pixels/img.png")
 colors = im.load()
 commands = []
 for x in range (0,800):
