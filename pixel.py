@@ -58048,7 +58048,11 @@ PX 349 120 ffff00
 PX 320 173 000000
 
 """
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect(("151.217.118.128", 1234))
 while True:
-    sock.send(data)
+    try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.connect(("151.217.118.128", 1234))
+        while True:
+            sock.send(data)
+    except:
+        pass
